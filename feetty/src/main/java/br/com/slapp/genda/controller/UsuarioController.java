@@ -20,7 +20,6 @@ import br.com.slapp.genda.repository.UsuarioRepository;
 /**
  * Criando o comentario
  * @author daura
- *
  */
 @Controller
 @RequestMapping("/usuarios")
