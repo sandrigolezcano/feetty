@@ -17,6 +17,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import br.com.slapp.genda.model.Usuario;
 import br.com.slapp.genda.repository.UsuarioRepository;
 
+/**
+ * Criando o comentario
+ * @author daura
+ *
+ */
 @Controller
 @RequestMapping("/usuarios")
 public class UsuarioController {
