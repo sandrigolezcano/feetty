@@ -50,6 +50,12 @@ public class UsuarioController {
 		return new ResponseEntity<Usuario>(usuarioRepository.update(usuarioDB), HttpStatus.ACCEPTED);
 	}
 
+	/**
+	 * Metodo para remover o usuario.
+	 * @param response
+	 * @param id
+	 * @throws IOException
+	 */
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void deletaUsuario(HttpServletResponse response, @PathVariable String id) throws IOException {
 		Usuario usuario = usuarioRepository.getById(Integer.parseInt(id));
