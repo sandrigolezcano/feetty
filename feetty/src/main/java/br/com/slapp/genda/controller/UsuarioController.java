@@ -19,7 +19,7 @@ import br.com.slapp.genda.repository.UsuarioRepository;
 
 /**
  * Criando o comentario
- * @author daura
+ * @author sandrigo.lezcano@gmail.com
  */
 @Controller
 @RequestMapping("/usuarios")

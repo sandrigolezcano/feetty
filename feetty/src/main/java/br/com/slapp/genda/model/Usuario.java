@@ -6,13 +6,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/*
- * 	USUARIO_ID INT(10) AUTO_INCREMENT PRIMARY KEY,
-	USUARIO_NM VARCHAR(50) NOT NULL,
-	EMAIL 	   VARCHAR(50) NOT NULL,
-  CONTRASENA VARCHAR(50) NOT NULL,
-	INACTIVO	 INT(1) UNSIGNED NOT NULL DEFAULT '0'
- * */
+/* 
+CREATE TABLE USUARIOS(
+	USUARIO_ID 	INT(10) AUTO_INCREMENT PRIMARY KEY,
+	USUARIO_NM 	VARCHAR(50) NOT NULL,
+	EMAIL 	   	VARCHAR(50) NOT NULL,
+	CONTRASENA 	VARCHAR(50) NOT NULL,
+	INACTIVO	INT(1) UNSIGNED NOT NULL DEFAULT '0'
+)
+insert into USUARIOS(USUARIO_ID,USUARIO_NM,EMAIL,CONTRASENA)
+     VALUES(1001,'SANDRIGO','sandrigo@lacanchita.om.py','tekorei'),
+           (1002,'CARLOS'  ,'carlos@lacanchita.om.py'  ,'tekorei'),
+           (1003,'EDGAR'   ,'edgar@lacanchita.om.py'   ,'tekorei')
+*/
 
 @Entity
 @Table(name = "usuarios")
@@ -22,23 +28,23 @@ public class Usuario {
 	@GeneratedValue
 	@Column(name = "USUARIO_ID", unique = true, nullable = false)
 	private Integer id;
-	
-	@Column(name = "USUARIO_NM",nullable=false,length=50)
+
+	@Column(name = "USUARIO_NM", nullable = false, length = 50)
 	private String nome;
-	
-	@Column(name = "EMAIL",nullable=false,length=50)
+
+	@Column(name = "EMAIL", nullable = false, length = 50)
 	private String email;
-	
-	@Column(name = "CONTRASENA",nullable=false,length=50)
+
+	@Column(name = "CONTRASENA", nullable = false, length = 50)
 	private String senha;
-	
-	@Column(name = "INACTIVO", columnDefinition="INT(1)")
+
+	@Column(name = "INACTIVO", columnDefinition = "INT(1)")
 	private Boolean inativo;
 
 	public Usuario() {
-	
+
 	}
-	
+
 	public Usuario(String nome, String senha, String email) {
 		this.nome = nome;
 		this.senha = senha;

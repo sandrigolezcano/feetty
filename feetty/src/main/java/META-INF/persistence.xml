@@ -5,6 +5,7 @@
 	<persistence-unit name="feetty">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>br.com.slapp.genda.model.Usuario</class>
+		<class>br.com.slapp.genda.model.Empresa</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/slappdb" />
 			<property name="javax.persistence.jdbc.user" value="root" />
